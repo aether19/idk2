@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 17%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 17%;
+    --primary: 95 24% 29%;
+    --primary-foreground: 40 33% 96%;
+    --secondary: 35 27% 94%;
+    --secondary-foreground: 95 24% 29%;
+    --muted: 35 27% 94%;
+    --muted-foreground: 28 5% 40%;
+    --accent: 35 27% 94%;
+    --accent-foreground: 95 24% 29%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 15% 83%;
+    --input: 30 15% 83%;
+    --ring: 95 24% 29%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #2C2C2C;
+    background-color: #FAF6F0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  ::selection {
+    background-color: rgba(74, 93, 58, 0.2);
+    color: #2C2C2C;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-olive text-cream font-body font-medium text-sm uppercase tracking-widest px-8 py-3.5 rounded-pill transition-all duration-300 ease-out;
+  }
+  .btn-primary:hover {
+    @apply bg-olive-light -translate-y-0.5;
+    box-shadow: 0 4px 12px rgba(74, 93, 58, 0.3);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center bg-transparent border-[1.5px] border-olive text-olive font-body font-medium text-sm uppercase tracking-widest px-7 py-3 rounded-pill transition-all duration-300 ease-out;
+  }
+  .btn-secondary:hover {
+    @apply bg-olive text-cream;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center bg-white/15 border border-cream/40 text-cream font-body font-medium text-sm uppercase tracking-widest px-8 py-3.5 rounded-pill transition-all duration-300 ease-out;
+  }
+  .btn-ghost:hover {
+    @apply bg-white/25 border-cream/60;
+  }
+
+  .section-container {
+    @apply w-full max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-10;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
